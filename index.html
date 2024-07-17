@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="stopwatch">
-        <div id="display" class="display">00:00:00</div>
-        <div class="controls">
-            <button onclick="startStopwatch()">Start</button>
-            <button onclick="pauseStopwatch()">Pause</button>
-            <button onclick="resetStopwatch()">Reset</button>
+    <div class="stopwatch-container">
+        <div class="stopwatch">
+            <div id="display" class="display">00:00:00.000</div>
+            <div class="controls">
+                <button onclick="startStopwatch()">Start</button>
+                <button onclick="pauseStopwatch()">Pause</button>
+                <button onclick="resetStopwatch()">Reset</button>
+                <button onclick="lapStopwatch()">Lap</button>
+            </div>
         </div>
+        <div id="laps" class="laps"></div>
     </div>
     <script src="script.js"></script>
 </body>

@@ -3,23 +3,27 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('watch.jpg') no-repeat center center fixed;
-    font-family: Arial, sans-serif;
+    background: url('stopwatch.png') no-repeat center center;
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
-.stopwatch {
+.stopwatch-container {
     text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 100%;
 }
 
 .display {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
+    color: #333;
+    letter-spacing: 2px;
 }
 
 .controls button {
@@ -31,8 +35,77 @@ body {
     cursor: pointer;
     background: #2575fc;
     color: #fff;
+    transition: background 0.3s;
 }
 
 .controls button:hover {
     background: #1e63d1;
+}
+
+.laps {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.laps div {
+    background: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stopwatch-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+    
+    .display {
+        font-size: 2.5rem;
+    }
+    
+    .controls button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    .laps {
+        max-height: 150px;
+        padding: 8px;
+    }
+    
+    .laps div {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .display {
+        font-size: 2rem;
+    }
+    
+    .controls button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .laps {
+        max-height: 100px;
+        padding: 5px;
+    }
+    
+    .laps div {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
 }
